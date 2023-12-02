@@ -1,6 +1,6 @@
-# Relation Database SQL Course by FreeCodeCamp
+# Relational Database SQL Course by FreeCodeCamp
 
-### My solution and notes used to complete and obtain FreeCodeCamp's Relation Database Certificate consisting of 300+ hours of coursework
+### My solution and notes used to complete and obtain FreeCodeCamp's Relational Database Certificate consisting of 300+ hours of coursework
 
 ## **Challenges**
 
