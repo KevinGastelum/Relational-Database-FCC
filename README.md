@@ -278,7 +278,11 @@ VALUES
 | 3   | Gastelum |     USA     |
 
 ```sql
-
+INSERT INTO kevin ( name, description )
+VALUES
+( 'Kevin', 'From' ),
+( 'Alexis', 'Arizona' ),
+( 'Gastelum', 'USA' );
 ```
 
 ---
