@@ -131,7 +131,7 @@ CREATE TABLE kevin (
 
 # Inserting Row Values
 
-## Creating the Data model, insert Row values and establishing Relationship between my Tables
+## Creating the Data model, inserting Row values and establishing Relationship between my Tables
 
 ### Galaxy Table (Must contain at least 6 rows)
 
@@ -198,6 +198,23 @@ VALUES
 | 11  | Sombrax            |    6    |          4500           |    FALSE |
 | 12  | Vortixia           |    1    |          5600           |    FALSE |
 
+```sql
+INSERT INTO planet (name, star_id, distance_in_light_years, has_life)
+VALUES
+('Earth', 3, 0, TRUE),
+('Jupiter', 3, 0, FALSE),
+('Saturn', 3, 0, FALSE),
+('Neptune', 3, 0, FALSE),
+('Ogle', 5, 3900, FALSE),
+('Dogle', 5, 6200, FALSE),
+('Androsia Prime', 2, 7200, FALSE),
+('Celestara', 2, 5000, FALSE),
+('Triangulum Majoris', 4, 7300, FALSE),
+('Sylphidia', 4, 8100, FALSE),
+('Sombrax', 6, 4500, FALSE),
+('Vortixia', 1, 5600, FALSE);
+```
+
 ---
 
 ### Moon Table (Must contain at least 20 rows)
@@ -225,6 +242,10 @@ VALUES
 | 19  | SomLuna      |    11     |     TRUE     |         inside Sombrero Galaxy |
 | 20  | Moon Vortex  |    12     |    FALSE     | inside Large Magellanic Galaxy |
 
+```sql
+
+```
+
 ---
 
 ### Kevin Table (Must contain at least 3 rows)
@@ -234,5 +255,9 @@ VALUES
 | 1   |  Kevin   |    From     |
 | 2   |  Alexis  |   Arizona   |
 | 3   | Gastelum |     USA     |
+
+```sql
+
+```
 
 ---
