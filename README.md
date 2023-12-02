@@ -6,13 +6,13 @@ Relational-Database-fcc
 
 ## **Challenges**
 
-|                Challenge                 | Name                                                             |                      Description                      |                     FileName |
-| :--------------------------------------: | :--------------------------------------------------------------- | :---------------------------------------------------: | ---------------------------: |
-| [1](#1.CelestialBodiesDatabaseChallenge) | [Celestial Bodies Database](#1.CelestialBodiesDatabaseChallenge) | Build a database of celestial bodies using PostgreSQL | [universe.sql](universe.sql) |
-|                    2                     |                                                                  |                                                       |                              |
-|                    3                     |                                                                  |                                                       |                              |
-|                    4                     |                                                                  |                                                       |                              |
-|                    5                     |                                                                  |                                                       |                              |
+|                  Challenge                  | Name                                                                |                      Description                      |                     FileName |
+| :-----------------------------------------: | :------------------------------------------------------------------ | :---------------------------------------------------: | ---------------------------: |
+| [1](#1-celestial-bodies-database-challenge) | [Celestial Bodies Database](#1-celestial-bodies-database-challenge) | Build a database of celestial bodies using PostgreSQL | [universe.sql](universe.sql) |
+|                      2                      |                                                                     |                                                       |                              |
+|                      3                      |                                                                     |                                                       |                              |
+|                      4                      |                                                                     |                                                       |                              |
+|                      5                      |                                                                     |                                                       |                              |
 
 ---
 
