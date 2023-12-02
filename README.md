@@ -168,6 +168,17 @@ VALUES
 | 5   | ULS-1     |     4     |      2000      |                      near planet Ogle and Dogle |
 | 6   | Sol       |     5     |      840       |                             near planet Sombrax |
 
+```sql
+INSERT INTO star ( name, galaxy_id, age_in_million, description )
+VALUES
+( 'R136a1', 6, 2, 'near planet Vortixia' ),
+( 'Mayall', 2, 3200, 'near planet Androsia Prima and Celastara' ),
+( 'Sun', 1, 4600, 'near planet Earth, Jupiter, Saturn, and Neptune' ),
+( 'X-7', 3, 1500, 'near planet Triangulum Majoris and Sylphidia' ),
+( 'ULS-1', 4, 2000, 'near planet Ogle and Dogle' ),
+( 'Sol', 5, 840, 'near planet Sombrax' );
+```
+
 ---
 
 ### Planet Table (Must contain at least 12 rows)
