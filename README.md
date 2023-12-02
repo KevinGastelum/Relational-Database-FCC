@@ -159,14 +159,14 @@ VALUES
 
 ### Star Table (Must contain at least 6 rows)
 
-| id  | Star name | galaxy_id | age in million |                                         description |
-| :-- | :-------- | :-------: | :------------: | --------------------------------------------------: |
-| 1   | R136a1    |     6     |       2        |                            contains planet Vortixia |
-| 2   | Mayall    |     2     |      3200      |        contains planet Androsia Prima and Celastara |
-| 3   | Sun       |     1     |      4600      | contains planet Earth, Jupiter, Saturn, and Neptune |
-| 4   | X-7       |     3     |      1500      |    contains planet Triangulum Majoris and Sylphidia |
-| 5   | ULS-1     |     4     |      2000      |                      contains planet Ogle and Dogle |
-| 6   | Sol       |     5     |      840       |                             contains planet Sombrax |
+| id  | Star name | galaxy_id | age in million |                                     description |
+| :-- | :-------- | :-------: | :------------: | ----------------------------------------------: |
+| 1   | R136a1    |     6     |       2        |                            near planet Vortixia |
+| 2   | Mayall    |     2     |      3200      |        near planet Androsia Prima and Celastara |
+| 3   | Sun       |     1     |      4600      | near planet Earth, Jupiter, Saturn, and Neptune |
+| 4   | X-7       |     3     |      1500      |    near planet Triangulum Majoris and Sylphidia |
+| 5   | ULS-1     |     4     |      2000      |                      near planet Ogle and Dogle |
+| 6   | Sol       |     5     |      840       |                             near planet Sombrax |
 
 ---
 
@@ -221,11 +221,7 @@ VALUES
 | id  |   name   | description |
 | :-- | :------: | :---------: |
 | 1   |  Kevin   |    From     |
-| 2   |  Alexis  |   Phoenix   |
-| 3   | Gastelum |   Arizona   |
-
-- kevin_id - SERIAL PRIMARY KEY
-- name - VARCHAR(255) NOT NULL UNIQUE
-- description - TEXT
+| 2   |  Alexis  |   Arizona   |
+| 3   | Gastelum |     USA     |
 
 ---
