@@ -199,7 +199,7 @@ VALUES
 | 12  | Vortixia           |    1    |          5600           |    FALSE |
 
 ```sql
-INSERT INTO planet (name, star_id, distance_in_light_years, has_life)
+INSERT INTO planet ( name, star_id, distance_in_light_years, has_life )
 VALUES
 ('Earth', 3, 0, TRUE),
 ('Jupiter', 3, 0, FALSE),
@@ -243,7 +243,28 @@ VALUES
 | 20  | Moon Vortex  |    12     |    FALSE     | inside Large Magellanic Galaxy |
 
 ```sql
-
+INSERT INTO moon ( name, planet_id, is_spherical, description )
+VALUES
+('Luna', 1, TRUE, 'inside Milky Way Galaxy'),
+('Europa', 2, TRUE, 'inside Milky Way Galaxy'),
+('Ganymede', 2, FALSE, 'inside Milky Way Galaxy'),
+('Callisto', 2, TRUE, 'inside Milky Way Galaxy'),
+('Lo', 2, FALSE, 'inside Milky Way Galaxy'),
+('Titan', 3, TRUE, 'inside Milky Way Galaxy'),
+('Mimas', 3, FALSE, 'inside Milky Way Galaxy'),
+('Lapetus', 3, TRUE, 'inside Milky Way Galaxy'),
+('Triton', 4, TRUE, 'inside Milky Way Galaxy'),
+('Nereid', 4, FALSE, 'inside Milky Way Galaxy'),
+('Og-Moon 1', 5, FALSE, 'inside Whirlpool Galaxy'),
+('Og-Moon 2', 5, FALSE, 'inside Whirlpool Galaxy'),
+('Dogle Moon', 6, FALSE, 'inside Whirlpool Galaxy'),
+('Prime Moon 1', 7, TRUE, 'inside Andromeda Galaxy'),
+('Prime Moon 2', 7, TRUE, 'inside Andromeda Galaxy'),
+('Cel Moon', 8, FALSE, 'inside Andromeda Galaxy'),
+('Tri-Moon', 9, TRUE, 'inside Triangulum Galaxy'),
+('SylyMoon', 10, TRUE, 'inside Triangulum Galaxy'),
+('SomLuna', 11, TRUE, 'inside Sombrero Galaxy'),
+('Moon Vortex', 12, FALSE, 'inside Large Magellanic Galaxy');
 ```
 
 ---
