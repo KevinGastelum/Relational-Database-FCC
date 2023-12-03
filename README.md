@@ -301,7 +301,7 @@ In order to complete this challenge we need to pull and store data from the Worl
 ### Database MUST contain :
 
 **teams** Table - teams needs columns [team_id and name]<br>
-**games** Table - games needs columns [game_id, year, round, winner_id, opponent_id, winner_goals, oponnent_goals]<br>
+**games** Table - games needs columns [game_id, year, round, winner_id, opponent_id, winner_goals, opponent_goals]<br>
 2 Primary keys <br>
 2 Foreign keys <br>
 All columns should have NOT NULL constraint<br>
@@ -309,8 +309,10 @@ All columns should have NOT NULL constraint<br>
 **games** table should contain 32 rows after runnning bash script to pull our data into our DB<br>
 Make sure each row and column contains a value and correct team ids are assigned to games table <br>
 
-<!-- t.teams needs columns team_id(Serial PKEY), name(UNIQUE), <br>
-t.games needs columns game_id(Serial PKEY), year(INT), round(VARCHAR), winner_id(FKEY Ref team_id), opponent_id(FKEY Ref team_id), winner_goals(INT), oponnent_goals(INT) <br> -->
+<!--
+t.teams needs columns team_id(Serial PKEY), name(UNIQUE), <br>
+t.games needs columns game_id(Serial PKEY), year(INT), round(VARCHAR), winner_id(FKEY Ref team_id), opponent_id(FKEY Ref team_id), winner_goals(INT), oponnent_goals(INT) <br>
+-->
 
 ## Create Database
 
@@ -318,7 +320,12 @@ t.games needs columns game_id(Serial PKEY), year(INT), round(VARCHAR), winner_id
 CREATE DATABASE worldcup;
 ```
 
-## Create Tables
+## Create Tables teams and games
+
+### Table teams
+
+- team_id - SERIAL PRIMARY KEY
+- name - NOT NULL UNIQUE
 
 ```sql
 -- Table Teams
@@ -326,6 +333,16 @@ CREATE TABLE teams (
     team_id SERIAL PRIMARY KEY,
     name VARCHAR(255) NOT NULL UNIQUE );
 ```
+
+### Table games
+
+- game_id - SERIAL PRIMARY KEY
+- year - INT NOT NULL
+- round - VARCHAR(255) NOT NULL
+- winner_id - INT NOT NULL FKey REF teams(team_id)
+- oppponent_id - INT NOT NULL FKey REF teams(team_id)
+- winner_goals - INT NOT NULL
+- opponent_goals - INT NOT NULL
 
 ```sql
 -- Table Games
