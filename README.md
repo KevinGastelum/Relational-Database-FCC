@@ -288,5 +288,3 @@ VALUES
 ---
 
 # 2. World Cup Database Challenge
-
-hello world
