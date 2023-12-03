@@ -300,13 +300,16 @@ In order to complete this challenge we need to pull and store data from the Worl
 
 ### Database MUST contain :
 
-2 tables (teams table and games table)<br>
-Teams table should contain 24 rows after running bash script to pull our data into our DB<br>
-Games table should contain 32 rows after runnning bash script to pull our data into our DB<br>
-Make sure each row and column contains a value and correct team ids are assigned to games table <br>
-t.teams needs columns team_id(Serial PKEY), name(UNIQUE), <br>
-t.games needs columns game_id(Serial PKEY), year(INT), round(VARCHAR), winner_id(FKEY Ref team_id), opponent_id(FKEY Ref team_id), winner_goals(INT), oponnent_goals(INT) <br>
-
+**teams** Table<br>
+**games** Table <br>
+t.teams needs columns - team_id and name <br>
+t.games needs columns - game_id, year, round, winner_id, opponent_id, winner_goals, oponnent_goals <br>
 2 Primary keys <br>
 2 Foreign keys <br>
 All columns should have NOT NULL constraint<br>
+**teams** Table should contain 24 rows after running bash script to pull our data into our DB<br>
+**games** table should contain 32 rows after runnning bash script to pull our data into our DB<br>
+Make sure each row and column contains a value and correct team ids are assigned to games table <br>
+
+t.teams needs columns team_id(Serial PKEY), name(UNIQUE), <br>
+t.games needs columns game_id(Serial PKEY), year(INT), round(VARCHAR), winner_id(FKEY Ref team_id), opponent_id(FKEY Ref team_id), winner_goals(INT), oponnent_goals(INT) <br>
