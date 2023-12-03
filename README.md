@@ -1,4 +1,4 @@
-# Relational Database SQL Course by FreeCodeCamp
+# [Relational Database SQL Course by FreeCodeCamp](https://www.freecodecamp.org/learn/relational-database/)
 
 ### My solution and notes used to complete and obtain FreeCodeCamp's Relational Database Certificate consisting of 300+ hours of coursework
 
