@@ -33,7 +33,7 @@ CREATE DATABASE universe;
 1 UNIQUE data type per table<br>
 2 NOT NULL data types per table<br>
 
-# Creating Table: [galaxy, star, planet, moon, and kevin]
+## Creating Table: [galaxy, star, planet, moon, and kevin]
 
 ### **t.galaxy** (6 rows , 5 cols)
 
