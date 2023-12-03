@@ -24,6 +24,7 @@ CREATE DATABASE universe;
 
 ### Database MUST contain at least :
 
+5 Tables [galaxy, star, planet, moon, {kevin}] <br>
 5 Primary keys <br>
 3 Foreign keys <br>
 1 NUMERIC data type<br>
@@ -290,16 +291,20 @@ VALUES
 # 2. World Cup Database Challenge
 
 This challenge contains a games.csv with the following structure
-| year | round | winner | opponent | winner_goals | opponent_goals |
-|:-- | :--: | :--: | :--: |:--: | :--: |
-| 2018 | Final| France| Croatia | 4 | 2|
+
+| year |    round    | winner  | opponent | winner_goals | opponent_goals |
+| :--- | :---------: | :-----: | :------: | :----------: | :------------: |
+| 2018 |    Final    | France  | Croatia  |      4       |       2        |
+| 2018 | Third Place | Belgium | England  |      2       |       0        |
+| 2018 | Semi-Final  | Croatia | England  |      2       |       1        |
 
 year,round,winner,opponent,winner_goals,opponent_goals
 
 ### Database MUST contain :
 
-teams and games table <br>
-t.teams = c.team_id, c.name<br>
+2 tables (teams table and games table)<br>
+t.teams needs columns team_id(Serial PKEY), name(UNIQUE), <br>
+t.games needs columns game_id(Serial PKEY), year(INT), round(VARCHAR), winner_id(FKEY Ref team_id), opponent(FKEY Ref team_id) <br>
 
 2 Primary keys <br>
 2 Foreign keys <br>
