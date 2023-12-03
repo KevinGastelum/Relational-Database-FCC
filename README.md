@@ -313,3 +313,25 @@ Make sure each row and column contains a value and correct team ids are assigned
 
 t.teams needs columns team_id(Serial PKEY), name(UNIQUE), <br>
 t.games needs columns game_id(Serial PKEY), year(INT), round(VARCHAR), winner_id(FKEY Ref team_id), opponent_id(FKEY Ref team_id), winner_goals(INT), oponnent_goals(INT) <br>
+
+## Create Database
+
+```sql
+CREATE DATABASE worldcup;
+```
+
+## Create Tables
+
+```sql
+-- Table Teams
+CREATE TABLE teams (
+    team_id SERIAL PRIMARY KEY,
+    name VARCHAR(255) NOT NULL UNIQUE );
+```
+
+```sql
+-- Table Games
+CREATE TABLE games (
+    game_id SERIAL PRIMARY KEY,
+    name VARCHAR(255) NOT NULL UNIQUE );
+```
