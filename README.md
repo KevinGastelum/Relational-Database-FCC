@@ -7,7 +7,7 @@
 |                  Challenge                  | Name                                                                |                                                           Description                                                            |                                                                                 FileName |
 | :-----------------------------------------: | :------------------------------------------------------------------ | :------------------------------------------------------------------------------------------------------------------------------: | ---------------------------------------------------------------------------------------: |
 | [1](#1-celestial-bodies-database-challenge) | [Celestial Bodies Database](#1-celestial-bodies-database-challenge) |                                      Build a database of celestial bodies using PostgreSQL                                       |                                                             [universe.sql](universe.sql) |
-|                    [2]()                    | [World Cup Database]()                                              | Create a Bash script that enters information from World Cup games into PostgreSQL, then query the database for useful statistics | [worldcup.sql](worldcup.sql), [insert_data.sh](insert_data.sh), [queries.sh](queries.sh) |
+|    [2](#2-world-cup-database-challenge)     | [World Cup Database](#2-world-cup-database-challenge)               | Create a Bash script that enters information from World Cup games into PostgreSQL, then query the database for useful statistics | [worldcup.sql](worldcup.sql), [insert_data.sh](insert_data.sh), [queries.sh](queries.sh) |
 |                    [3]()                    | [Salon Appt Scheduler]()                                            |          Create an interactive Bash program that uses PostgreSQL to track the customers and appointments for your salon          |                                             [salon.sql](salon.sql), [salon.sh](salon.sh) |
 |                    [4]()                    | [Periodic Table Database]()                                         |                  Create Bash a script to get information about chemical elements from a periodic table database                  |                       [periodic_table.sql](periodic_table.sql), [element.sh](element.sh) |
 |                    [5]()                    | [Number Guessing Game]()                                            |  Use Bash scripting, PostgreSQL, and Git to create a number guessing game that runs in the terminal and saves user information   |                 [number_guess.sql](number_guess.sql), [number_guess.sh](number_guess.sh) |
@@ -286,3 +286,7 @@ VALUES
 ```
 
 ---
+
+# 2. World Cup Database Challenge
+
+hello world
