@@ -300,10 +300,8 @@ In order to complete this challenge we need to pull and store data from the Worl
 
 ### Database MUST contain :
 
-**teams** Table<br>
-**games** Table <br>
-t.teams needs columns - team_id and name <br>
-t.games needs columns - game_id, year, round, winner_id, opponent_id, winner_goals, oponnent_goals <br>
+**teams** Table - teams needs columns [team_id and name]<br>
+**games** Table - games needs columns [game_id, year, round, winner_id, opponent_id, winner_goals, oponnent_goals]<br>
 2 Primary keys <br>
 2 Foreign keys <br>
 All columns should have NOT NULL constraint<br>
