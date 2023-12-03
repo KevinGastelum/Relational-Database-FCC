@@ -309,8 +309,8 @@ All columns should have NOT NULL constraint<br>
 **games** table should contain 32 rows after runnning bash script to pull our data into our DB<br>
 Make sure each row and column contains a value and correct team ids are assigned to games table <br>
 
-t.teams needs columns team_id(Serial PKEY), name(UNIQUE), <br>
-t.games needs columns game_id(Serial PKEY), year(INT), round(VARCHAR), winner_id(FKEY Ref team_id), opponent_id(FKEY Ref team_id), winner_goals(INT), oponnent_goals(INT) <br>
+<!-- t.teams needs columns team_id(Serial PKEY), name(UNIQUE), <br>
+t.games needs columns game_id(Serial PKEY), year(INT), round(VARCHAR), winner_id(FKEY Ref team_id), opponent_id(FKEY Ref team_id), winner_goals(INT), oponnent_goals(INT) <br> -->
 
 ## Create Database
 
