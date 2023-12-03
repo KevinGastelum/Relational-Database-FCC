@@ -107,10 +107,10 @@ CREATE TABLE planet (
 CREATE TABLE moon (
     moon_id SERIAL PRIMARY KEY,
     name VARCHAR(255) NOT NULL UNIQUE,
-    moon_id INT,
+    planet_id INT,
     is_spherical BOOLEAN,
     description TEXT,
-    FOREIGN KEY (star_id) REFERENCES star(star_id));
+    FOREIGN KEY (planet_id) REFERENCES planet(planet_id));
 ```
 
 ---
@@ -333,5 +333,12 @@ CREATE TABLE teams (
 -- Table Games
 CREATE TABLE games (
     game_id SERIAL PRIMARY KEY,
-    name VARCHAR(255) NOT NULL UNIQUE );
+    year INT NOT NULL,
+    round VARCHAR(255) NOT NULL,
+    winner_id INT NOT NULL,
+    opponent_id INT NOT NULL,
+    winner_goals INT NOT NULL,
+    opponent_goals INT NOT NULL,
+    FOREIGN KEY (winner_id) REFERENCES teams(team_id),
+    FOREIGN KEY (opponent_id) REFERENCES teams(team_id));
 ```
