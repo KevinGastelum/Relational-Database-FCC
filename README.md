@@ -288,3 +288,24 @@ VALUES
 ---
 
 # 2. World Cup Database Challenge
+
+This challenge contains a games.csv with the following structure
+| year | round | winner | opponent | winner_goals | opponent_goals |
+|:-- | :--: | :--: | :--: |:--: | :--: |
+| 2018 | Final| France| Croatia | 4 | 2|
+
+year,round,winner,opponent,winner_goals,opponent_goals
+
+### Database MUST contain :
+
+teams and games table <br>
+t.teams = c.team_id, c.name<br>
+
+2 Primary keys <br>
+2 Foreign keys <br>
+1 NUMERIC data type<br>
+1 TEXT data type<br>
+2 BOOLEAN data types<br>
+2 INT data types (NOT Primary Key or Foreign Key)<br>
+1 UNIQUE data type per table<br>
+2 NOT NULL data types per table<br>
