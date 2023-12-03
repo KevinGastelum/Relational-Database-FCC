@@ -290,7 +290,7 @@ VALUES
 
 # 2. World Cup Database Challenge
 
-In order to complete this challenge we need to pull and store data from the World Cup games of 2014 and 2018 inside an SQL database (stored in games.csv). First we need to create a database compatible with our games.csv, which has the following structure:
+In order to complete this challenge we need to pull and store data from the World Cup games of 2014 and 2018 inside an SQL database (currently stored in games.csv). First we need to create a database compatible with our games.csv, which has the following structure:
 
 | year |    round    | winner  | opponent | winner_goals | opponent_goals |
 | :--- | :---------: | :-----: | :------: | :----------: | :------------: |
@@ -301,9 +301,9 @@ In order to complete this challenge we need to pull and store data from the Worl
 ### Database MUST contain :
 
 2 tables (teams table and games table)<br>
-Teams table should containe 24 rows after running bash script <br>
+Teams table should contain 24 rows after running bash script <br>
 Games table should contain 32 rows after runnning bash script <br>
-Each row and column should contain a value, make sure correct team ids are assigned to games table <br>
+Make sure each row and column contains a value and correct team ids are assigned to games table <br>
 t.teams needs columns team_id(Serial PKEY), name(UNIQUE), <br>
 t.games needs columns game_id(Serial PKEY), year(INT), round(VARCHAR), winner_id(FKEY Ref team_id), opponent_id(FKEY Ref team_id), winner_goals(INT), oponnent_goals(INT) <br>
 
