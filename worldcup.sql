@@ -1,13 +1,12 @@
 -- CREATE DATABASE
 CREATE DATABASE worldcup;
 
---CREATE TABLES
-
--- Table Teams
+-- Create Table Teams
 CREATE TABLE teams (
     team_id SERIAL PRIMARY KEY,
     name VARCHAR(255) NOT NULL UNIQUE );
--- Table Games
+
+-- Create Table Games
 CREATE TABLE games (
     game_id SERIAL PRIMARY KEY,
     year INT NOT NULL,
