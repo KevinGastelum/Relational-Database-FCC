@@ -357,3 +357,5 @@ CREATE TABLE games (
     FOREIGN KEY (winner_id) REFERENCES teams(team_id),
     FOREIGN KEY (opponent_id) REFERENCES teams(team_id));
 ```
+
+## Creating the bash script
