@@ -316,7 +316,7 @@ t.teams needs columns team_id(Serial PKEY), name(UNIQUE), <br>
 t.games needs columns game_id(Serial PKEY), year(INT), round(VARCHAR), winner_id(FKEY Ref team_id), opponent_id(FKEY Ref team_id), winner_goals(INT), oponnent_goals(INT) <br>
 -->
 
-## Create Database
+## Step 1 Create Database
 
 ```sql
 CREATE DATABASE worldcup;
@@ -360,7 +360,9 @@ CREATE TABLE games (
     FOREIGN KEY (opponent_id) REFERENCES teams(team_id));
 ```
 
-## Automize fetching and storing data with our bash script
+---
+
+## Step 2 Automize fetching and storing data with our bash script
 
 ```bash
 #! /bin/bash
@@ -374,7 +376,7 @@ fi
 
 # Do not change code above this line. Use the PSQL variable above to query your database.
 
-# MY CODE BEGINS HERE Read from games.csv and split each line by commas
+# MY CODE BEGINS HERE: Read from games.csv and split each line by commas
 cat games.csv | while IFS="," read YEAR ROUND WINNER OPPONENT WINNER_GOALS OPPONENT_GOALS
 do
   # Skip the header line
