@@ -415,3 +415,9 @@ cat games.csv | while IFS="," read  YEAR ROUND WINNER OPPONENT WINNER_GOALS OPPO
 do
 
 ```
+
+---
+
+## Query Database
+
+Run queries.sh to make sure our outputs are correct
