@@ -301,6 +301,8 @@ In order to complete this challenge we need to pull and store data from the Worl
 
 **Second** we need to create a bash script to automize fetching and storing our data into the **"worldcup"** database.
 
+**Lastly** we need to update the queries.sh file provided in this projects directory in order to outout the correct answers as listed in the "expected_output.sh" file
+
 ### Database MUST contain :
 
 **teams** Table - teams needs columns [team_id and name]<br>
