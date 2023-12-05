@@ -299,7 +299,7 @@ In order to complete this challenge we need to pull and store data from the Worl
 | 2018 | Third Place | Belgium | England  |      2       |       0        |
 | 2018 | Semi-Final  | Croatia | England  |      2       |       1        |
 
-**Second** we need to create a bash script to automize fetching and storing our data inside the **"worldcup"** database.
+**Second** we need to create a bash script to automize fetching and storing our data into the **"worldcup"** database.
 
 ### Database MUST contain :
 
