@@ -24,7 +24,7 @@ CREATE DATABASE universe;
 
 ### Database MUST contain at least :
 
-5 Tables [galaxy, star, planet, moon, kevin {5th table can be any name}] <br>
+5 Tables [galaxy, star, planet, moon, kevin (5th table can be any name)] <br>
 5 Primary keys <br>
 3 Foreign keys <br>
 1 NUMERIC data type<br>
