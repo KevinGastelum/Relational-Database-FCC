@@ -391,7 +391,7 @@ do
     if [[ -z $WINNER_ID ]]
     then
       # Insert the winner team into the teams table
-      $($PSQL "INSERT INTO teams(name) VALUES ('$WINNER')"
+      $PSQL "INSERT INTO teams(name) VALUES ('$WINNER')"
       # Retrieve the newly added team_id for the winner
       WINNER_ID=$($PSQL "SELECT team_id FROM teams WHERE name='$WINNER'");
     fi
