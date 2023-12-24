@@ -130,9 +130,9 @@ CREATE TABLE kevin (
 
 ---
 
-# Inserting Row Values
+## Inserting Row Values
 
-## Creating the Data model, inserting Row values and establishing Relationship between my Tables
+Create the Data model, insert Row values and establish Relationship between Tables
 
 ### Galaxy Table (Must contain at least 6 rows)
 
