@@ -301,7 +301,7 @@ In order to complete this challenge we need to pull and store data from the Worl
 
 **Second** we need to create a bash script to automize fetching and storing our data into the **"worldcup"** database.
 
-**Lastly** we need to update the queries.sh file provided in this projects directory in order to outout the correct answers as listed in the "expected_output.sh" file
+**Lastly** we need to provide our queries to the queries.sh file to ensure we output the correct answers as listed in the "expected_output.sh" file
 
 ### Database MUST contain :
 
@@ -367,6 +367,8 @@ CREATE TABLE games (
 
 ## Step 2 Automize fetching and storing data with our bash script
 
+The following script fetches data from our games.csv file and inserts it into our empty teams and games table
+
 ```bash
 #! /bin/bash
 
@@ -391,7 +393,7 @@ do
     if [[ -z $WINNER_ID ]]
     then
       # Insert the winner team into the teams table
-      $($PSQL "INSERT INTO teams(name) VALUES ('$WINNER')")
+      $PSQL "INSERT INTO teams(name) VALUES ('$WINNER')"
       # Retrieve the newly added team_id for the winner
       WINNER_ID=$($PSQL "SELECT team_id FROM teams WHERE name='$WINNER'");
     fi
@@ -402,24 +404,74 @@ do
     if [[ -z $OPPONENT_ID ]]
     then
       # Insert the opponent team into the teams table
-      $($PSQL "INSERT INTO teams(name) VALUES ('$OPPONENT')")
+      $PSQL "INSERT INTO teams(name) VALUES ('$OPPONENT')"
       # Retrieve the newly added team_id for the opponent
       OPPONENT_ID=$($PSQL "SELECT team_id FROM teams WHERE name='$OPPONENT'")
     fi
 
     # Insert the game data into the games table
-    $($PSQL "INSERT INTO games(winner_id, opponent_id, winner_goals, opponent_goals, year, round) VALUES ($WINNER_ID, $OPPONENT_ID, $WINNER_GOALS, $OPPONENT_GOALS, $YEAR, '$ROUND')");
+    $PSQL "INSERT INTO games(winner_id, opponent_id, winner_goals, opponent_goals, year, round) VALUES ($WINNER_ID, $OPPONENT_ID, $WINNER_GOALS, $OPPONENT_GOALS, $YEAR, '$ROUND')";
   fi
 done
-
-
-cat games.csv | while IFS="," read  YEAR ROUND WINNER OPPONENT WINNER_GOALS OPPONENT_GOALS
-do
 
 ```
 
 ---
 
-## Query Database
+## Step 3 Query Database
 
-Run queries.sh to make sure our outputs are correct
+Enter your queries into queries.sh and make sure outputs are correct to ensure our database was set up correctly
+
+```bash
+#! /bin/bash
+
+PSQL="psql --username=freecodecamp --dbname=worldcup --no-align --tuples-only -c"
+
+# Do not change code above this line. Use the PSQL variable above to query your database.
+
+echo -e "\nTotal number of goals in all games from winning teams:"
+echo "$($PSQL "SELECT SUM(winner_goals) FROM games")"
+
+echo -e "\nTotal number of goals in all games from both teams combined:"
+echo "$($PSQL "SELECT SUM(winner_goals + opponent_goals) FROM games")"
+#Expected output = 90
+
+echo -e "\nAverage number of goals in all games from the winning teams:"
+echo "$($PSQL "SELECT AVG(winner_goals) FROM games")"
+#Expected output = 2.125000000
+
+echo -e "\nAverage number of goals in all games from the winning teams rounded to two decimal places:"
+echo "$($PSQL "SELECT ROUND(AVG(winner_goals),2) FROM games")"
+#Expected output = 2.13
+
+echo -e "\nAverage number of goals in all games from both teams:"
+echo "$($PSQL "SELECT AVG(winner_goals + opponent_goals) FROM games")"
+#Expected output = 2.8125000000
+
+echo -e "\nMost goals scored in a single game by one team:"
+echo "$($PSQL "SELECT MAX(winner_goals) FROM games")"
+#Expected output = 7
+
+echo -e "\nNumber of games where the winning team scored more than two goals:"
+echo "$($PSQL "SELECT COUNT(game_id) FROM games WHERE winner_goals > 2")" #Expected output = 6
+
+echo -e "\nWinner of the 2018 tournament team name:"
+echo "$($PSQL "SELECT name FROM teams JOIN games ON teams.team_id = games.winner_id WHERE year = 2018 AND round = 'Final'")"
+#Expected output = France
+
+echo -e "\nList of teams who played in the 2014 'Eighth-Final' round:"
+echo "$($PSQL "SELECT name FROM teams JOIN games ON teams.team_id = games.winner_id OR teams.team_id = games.opponent_id WHERE year = 2014 AND round = 'Eighth-Final' ORDER BY name ASC")"
+#Expected output = Algeria, Argentina,Belgium, Brazil, Chile, Colombia, Costa Rica, France, Germany, Greece, Mexico, Netherlands, Nigeria, Switzerland, United States, Uruguay
+
+echo -e "\nList of unique winning team names in the whole data set:"
+echo "$($PSQL "SELECT DISTINCT(name) FROM teams JOIN games ON teams.team_id = games.winner_id ORDER BY name")"
+#Expected Output = Argentina, Belgium, Brazil, Colombia, Costa Rica, Croatia, England, France, Germany, Netherlands, Russia, Sweden, Uruguay
+
+echo -e "\nYear and team name of all the champions:"
+echo "$($PSQL "SELECT games.year, teams.name FROM teams JOIN games ON teams.team_id = games.winner_id WHERE round = 'Final' ORDER BY year")"
+#Expected output = 2014 Germany and 2018 France
+
+echo -e "\nList of teams that start with 'Co':"
+echo "$($PSQL "SELECT name FROM teams WHERE name LIKE 'Co%'")"
+#Expected output =  Colombia , Costa Rica
+```
