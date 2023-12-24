@@ -291,7 +291,7 @@ VALUES
 # 2. World Cup Database Challenge
 
 In order to complete this challenge we need to pull and store data from the World Cup games of 2014 and 2018 inside an SQL database (currently in a csv file 'games.csv'). <br>
-**First** we need to create a database compatible with our games.csv, which has the following structure:
+**FIRST** we need to create a database compatible with our games.csv, which has the following structure:
 
 | year |    round    | winner  | opponent | winner_goals | opponent_goals |
 | :--- | :---------: | :-----: | :------: | :----------: | :------------: |
@@ -299,9 +299,9 @@ In order to complete this challenge we need to pull and store data from the Worl
 | 2018 | Third Place | Belgium | England  |      2       |       0        |
 | 2018 | Semi-Final  | Croatia | England  |      2       |       1        |
 
-**Second** we need to create a bash script to automize fetching and storing our data into the **"worldcup"** database.
+**SECOND** we need to create a bash script to automize fetching and storing our data into the **"worldcup"** database.
 
-**Lastly** we need to provide our queries to the queries.sh file to ensure we output the correct answers as listed in the "expected_output.sh" file
+**LASTLY** we need to provide our queries to the queries.sh file to ensure we output the correct answers as listed in the "expected_output.sh" file
 
 ### Database MUST contain :
 
