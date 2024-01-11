@@ -490,7 +490,7 @@ CREATE DATABASE salon;
 ### Database MUST contain 3 Tables :
 
 - customers
-- services
+- services (MUST Cointain 3 row values)
 - appointments
 
 ## Customers Table
@@ -508,6 +508,16 @@ CREATE TABLE customers (
 CREATE TABLE services (
     service_id SERIAL PRIMARY KEY,
     name VARCHAR(255));
+```
+
+Inserting 3 row values
+
+```sql
+INSERT INTO services (name)
+VALUES
+    ('Harcuit'),
+    ('Massage'),
+    ('Facials');
 ```
 
 ## Appointments Table
