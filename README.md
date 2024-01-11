@@ -559,6 +559,19 @@ if [[ -z $HAVE_SERVICE ]]
 then
   MAIN_MENU "I could not find that service. What would you like today?"
 fi
+
+echo -e "\nWhat's your phone number?"
+read PHONE
+
+HAVE_CUSTOMER=$(PSQL "SELECT customer_id, name FROM customers WHERE phone=$PHONE")
+
+if [[ -z $HAVE_CUSTOMER ]]
+then
+  echo -e "\nI don't have a record for that phone number, what's your name?"
+  read NAME
+  INSERT=$(PSQL "INSERT INTO customers (name, phone) VALUES ('$NAME', '$PHONE')")
+  echo -e "\nWhat time would you like your $SERVICE, $NAME?"
+fi
 }
 MAIN_MENU
 
