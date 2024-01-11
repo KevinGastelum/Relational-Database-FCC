@@ -367,7 +367,7 @@ CREATE TABLE games (
 
 ## Step 2 Automize fetching and storing data with our bash script
 
-Before updating scripts make sure to change the permissions of the insert_data.sh and queries.sh with `chmod +600 insert_data.sh` && `chmod +600 queries.sh` in a new terminal
+Before updating scripts make sure to change the permissions of the insert_data.sh and queries.sh with `chmod +x insert_data.sh` && `chmod +x queries.sh` in a new terminal
 
 The following script for insert_data.sh fetches data from our games.csv file and inserts it into our empty teams and games table
 
