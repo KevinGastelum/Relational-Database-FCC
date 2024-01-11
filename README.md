@@ -487,15 +487,37 @@ echo "$($PSQL "SELECT name FROM teams WHERE name LIKE 'Co%'")"
 CREATE DATABASE salon;
 ```
 
-### Database MUST contain at least :
+### Database MUST contain 3 Tables :
 
-3 Tables [customers, services, appointments] <br>
+- customers
+- services
+- appointments
 
-## Creating Table: [customer, star, planet, moon, and kevin]
+## Customers Table
 
 ```sql
 CREATE TABLE customers (
     customer_id SERIAL PRIMARY KEY,
     phone VARCHAR(255) UNIQUE,
     name VARCHAR(255));
+```
+
+## Services Table
+
+```sql
+CREATE TABLE services (
+    service_id SERIAL PRIMARY KEY,
+    name VARCHAR(255));
+```
+
+## Appointments Table
+
+```sql
+CREATE TABLE appointments (
+    appointment_id SERIAL PRIMARY KEY,
+    time VARCHAR(255),
+    customer_id INT,
+    service_id INT,
+    FOREIGN KEY (service_id) REFERENCES services(service_id),
+    FOREIGN KEY (customer_id) REFERENCES customers(customer_id));
 ```
