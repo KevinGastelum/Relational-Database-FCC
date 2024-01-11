@@ -531,3 +531,35 @@ CREATE TABLE appointments (
     FOREIGN KEY (service_id) REFERENCES services(service_id),
     FOREIGN KEY (customer_id) REFERENCES customers(customer_id));
 ```
+
+## Step 2 Create salon.sh script to automize scheduling appointments for our Salon
+
+```bash
+#! /bin/bash
+
+PSQL="psql --username=freecodecamp --dbname=salon --tuples-only -c"
+
+echo -e "\n ~~~~~ MY SALON ~~~~~\n"
+echo -e "Welcome to Kevin's Salon, how can I help you?\n"
+
+MAIN_MENU(){
+if [[ $1 ]]
+then
+  echo -e "\n$1"
+fi
+SERVICES=$($PSQL "SELECT service_id, name FROM services")
+echo "$SERVICES" | while read SERVICE_ID BAR NAME
+do
+  echo "$SERVICE_ID) $NAME"
+done
+read SERVICE_SELECTION
+HAVE_SERVICE=$($PSQL "SELECT service_id, name FROM services WHERE service_id=$SERVICE_SELECTION")
+
+if [[ -z $HAVE_SERVICE ]]
+then
+  MAIN_MENU "I could not find that service. What would you like today?"
+fi
+}
+MAIN_MENU
+
+```
