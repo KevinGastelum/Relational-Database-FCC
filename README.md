@@ -490,7 +490,7 @@ CREATE DATABASE salon;
 ### Database MUST contain 3 Tables :
 
 - customers
-- services (MUST Cointain 3 row values)
+- services (MUST Contain 3 row values)
 - appointments
 
 ## Customers Table
@@ -502,7 +502,7 @@ CREATE TABLE customers (
     name VARCHAR(255));
 ```
 
-## Services Table
+## Services Table (MUST Contain 3 row values)
 
 ```sql
 CREATE TABLE services (
@@ -510,7 +510,7 @@ CREATE TABLE services (
     name VARCHAR(255));
 ```
 
-Inserting 3 row values
+Insert 3 row values
 
 ```sql
 INSERT INTO services (name)
