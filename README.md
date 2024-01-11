@@ -480,3 +480,22 @@ echo "$($PSQL "SELECT name FROM teams WHERE name LIKE 'Co%'")"
 ```
 
 # 3. Salon Appointment Scheduler Challenge
+
+## Create Database
+
+```sql
+CREATE DATABASE salon;
+```
+
+### Database MUST contain at least :
+
+3 Tables [customers, services, appointments] <br>
+
+## Creating Table: [customer, star, planet, moon, and kevin]
+
+```sql
+CREATE TABLE customers (
+    customer_id SERIAL PRIMARY KEY,
+    phone VARCHAR(255) UNIQUE,
+    name VARCHAR(255));
+```
