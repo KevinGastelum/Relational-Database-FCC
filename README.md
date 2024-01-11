@@ -532,7 +532,7 @@ CREATE TABLE appointments (
     FOREIGN KEY (customer_id) REFERENCES customers(customer_id));
 ```
 
-## Step 2 Create salon.sh script to automize scheduling appointments for our Salon
+## Step 2 Create `salon.sh` script to automize scheduling appointments for our Salon
 
 ```bash
 #! /bin/bash
